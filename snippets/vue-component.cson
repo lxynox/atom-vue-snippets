@@ -1,53 +1,81 @@
 '.text.html.vue':
-  'Vue Template Tag':
-    'prefix': 'vtemplate',
-    'body': """
-    <template${1: lang="$2"}>$0</template>
-    """
-  'Vue Script Tag':
-    'prefix': 'vscript',
-    'body': """
-    <script${1: lang="$2"}>
-    \texport default {
-    \t\t// Options / Data
-    \t\tdata () {
-    \t\t\treturn {}
-    \t\t},
-    \t\tprops: [],
-    \t\tcomputed: {},
-    \t\tmethods: {}// ,
-    \t\t// watch: {},
-    \t\t// Options / DOM
-    \t\t// el () {},
-    \t\t// replace: true,
-    \t\t// template: '',
-    \t\t// Options / Lifecycle Hooks
-    \t\t// init () {},
-    \t\t// crated () {},
-    \t\t// beforeCompile () {},
-    \t\t// compiled () {},
-    \t\t// ready () {},
-    \t\t// attached () {},
-    \t\t// detached () {},
-    \t\t// beforeDestroy () {},
-    \t\t// destroyed () {},
-    \t\t// Options / Assets
-    \t\t// directives: {},
-    \t\t// elementDirectives: {},
-    \t\t// filters: {},
-    \t\t// components: {},
-    \t\t// transitions: {},
-    \t\t// partials: {},
-    \t\t// Options / Misc
-    \t\t// parent: null,
-    \t\t// events: {},
-    \t\t// mixins: [],
-    \t\t// name: ''
-    \t}
-    </script>
-    """
-  'Vue Style Tag':
-    'prefix': 'vstyle',
-    'body': """
-    <style${1: lang="$2"}${3: scoped}>$0</style>
-    """
+	'Vue all':
+		'prefix': 'vall'
+		'body': """
+			<template${1: lang="$2"}>
+			$0
+			</template>
+
+			<script${3: lang="$4"}>
+			export default {
+				name: '',
+				props: [],
+				components: {},
+				data () {
+					return {}
+				},
+				computed: {},
+				methods: {}
+			}
+			</script>
+
+			<style${5: lang="$6"}${7: scoped}>
+
+			</style>
+		"""
+
+	'Vue Template Tag':
+		'prefix': 'vtem'
+		'body': """
+			<template${1: lang="$2"}>$0</template>
+		"""
+
+	'Vue Script Tag':
+		'prefix': 'vsc'
+		'body': """
+			<script${1: lang="$2"}>
+			export default {
+				// Options / Data
+				props: [],
+				data () {
+					return {}
+					},
+				methods: {},
+				computed: {},
+				// watch: {},
+				// Options / DOM
+				// el: '',
+				// template: '',
+				// render(h) {},
+				// renderError(h) {}, // dev mode only, with hot-reload
+				// Options / Lifecycle Hooks
+				// beforeCreated () {},
+				// created () {},
+				// beforeMount() {},
+				// mounted() {},
+				// beforeUpdate() {},
+				// updated() {},
+				// activated() {},
+				// deactivated() {},
+				// beforeDestroy () {},
+				// destroyed () {},
+				// Options / Assets
+				// directives: {},
+				// filters: {},
+				// components: {},
+				// Options / Misc
+				// name: '',
+				// functional: true,
+				// Options  / Composition
+				// parent: null,
+				// mixins: [],
+				// extends: {} // short-hand of Vue.extend
+			}
+			</script>
+		"""
+
+	'Vue Style Tag':
+		'prefix': 'vst'
+		'body': """
+			<style${1: lang="$2"}${3: scoped}>$0</style>
+		"""
